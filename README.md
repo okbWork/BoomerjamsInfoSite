@@ -31,46 +31,25 @@ node --version
 
 ## Run locally (development preview)
 
-Use the provided launcher (recommended). It **always serves from this repo root**, even if you run it from another folder.
+Because this is a static site, you should open it through a small local web server (instead of double-clicking HTML files).
 
-### Option A (recommended): Repo launcher script
+### Option A (recommended): Python HTTP server
 
-From anywhere:
-
-```bash
-python3 /path/to/BoomerjamsInfoSite/serve_local.py
-```
-
-If you are already inside the repo:
+From the project root:
 
 ```bash
-python3 serve_local.py
+python3 -m http.server 4173
 ```
 
 Then open:
 
 - `http://localhost:4173/index.html`
 
-Use a different port if needed:
-
-```bash
-python3 serve_local.py 8080
-```
-
 Stop server with `Ctrl + C`.
 
-### Option B: Raw Python HTTP server (manual)
+### Option B: Node.js serve package
 
-If you prefer `python -m http.server`, you **must** run it in the repo root:
-
-```bash
-cd /path/to/BoomerjamsInfoSite
-python3 -m http.server 4173
-```
-
-### Option C: Node.js serve package
-
-From project root:
+From the project root:
 
 ```bash
 npx serve .
@@ -122,46 +101,6 @@ On `index.html`:
 
 - Resize browser to mobile width (e.g., 375px wide).
 - Confirm nav, cards, and form remain readable and usable.
-
----
-
-
-## Troubleshooting common local 404 issues
-
-If you see errors like:
-
-- `GET /index.html 404`
-- `GET /favicon.ico 404`
-
-use this checklist:
-
-1. Use the safer launcher script (recommended):
-
-```bash
-python3 /path/to/BoomerjamsInfoSite/serve_local.py
-```
-
-2. If using `python -m http.server`, make sure you are in the project folder **before** starting the server:
-
-```bash
-cd /path/to/BoomerjamsInfoSite
-python3 -m http.server 4173
-```
-
-3. Verify `index.html` exists in the current folder:
-
-```bash
-pwd
-rg --files | rg "index.html|favicon.ico"
-```
-
-4. Open exactly:
-
-- `http://localhost:4173/index.html`
-
-5. If you started the server from another directory by mistake, stop it (`Ctrl + C`) and restart from this repo root (or just use `serve_local.py`).
-
-> `favicon.ico` requests are normal browser behavior. This repo now includes a local `favicon.ico` file so you should not get that 404 anymore.
 
 ---
 
