@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="favicon.ico" sizes="any" />
     <title>Boomerjams | App Publisher Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -13,7 +12,6 @@
         <a class="brand" href="index.html">Boomerjams</a>
         <nav aria-label="Main navigation">
           <ul class="nav-links">
-            <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="descriptions.html">Descriptions</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="apps.html">Apps</a></li>
@@ -60,30 +58,18 @@
       <section class="container contact" id="contact">
         <h2>Get in touch</h2>
         <p>Have a question, collaboration idea, or feedback? Send a message below.</p>
+        <form class="contact-form" action="mailto:kobbowork@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
 
-        <div id="contactPanel" class="contact-panel">
-          <form id="contactForm" class="contact-form" action="https://formsubmit.co/ajax/kobbowork@gmail.com" method="post">
-            <input type="hidden" name="_subject" value="Boomerjams Portfolio Contact" />
-            <input type="hidden" name="_captcha" value="false" />
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
 
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-
-            <button type="submit" class="btn" id="contactSubmit">Send Message</button>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
-
-          <div id="formSuccess" class="form-success" aria-hidden="true">
-            <span class="checkmark" aria-hidden="true">✓</span>
-            <h3>Message Sent</h3>
-            <p id="successText">Your message has been submitted successfully. I'll get back to you soon.</p>
-          </div>
-        </div>
+          <button type="submit" class="btn">Send Email</button>
+        </form>
       </section>
     </main>
 
