@@ -34,6 +34,14 @@ internalLinks.forEach((link) => {
   });
 });
 
+
+// Add reveal animation classes to privacy policy sections.
+const policyMain = document.querySelector('.policy');
+if (policyMain) {
+  const policyBlocks = policyMain.querySelectorAll('h2, h3, h4, p, ul');
+  policyBlocks.forEach((block) => block.classList.add('reveal'));
+}
+
 // Smooth reveal on scroll.
 const revealEls = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {

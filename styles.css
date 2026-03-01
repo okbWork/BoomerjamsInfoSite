@@ -295,6 +295,8 @@ textarea {
 }
 
 .policy {
+  margin-top: 1.1rem;
+  margin-bottom: 2.1rem;
   background: rgba(255, 253, 248, 0.82);
   border: 1px solid var(--line);
   border-radius: var(--radius);
