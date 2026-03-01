@@ -104,40 +104,6 @@ On `index.html`:
 
 ---
 
-
-## Troubleshooting common local 404 issues
-
-If you see errors like:
-
-- `GET /index.html 404`
-- `GET /favicon.ico 404`
-
-use this checklist:
-
-1. Make sure you are in the project folder **before** starting the server:
-
-```bash
-cd /path/to/BoomerjamsInfoSite
-python3 -m http.server 4173
-```
-
-2. Verify `index.html` exists in the current folder:
-
-```bash
-pwd
-rg --files | rg "index.html|favicon.ico"
-```
-
-3. Open exactly:
-
-- `http://localhost:4173/index.html`
-
-4. If you started the server from another directory by mistake, stop it (`Ctrl + C`) and restart from this repo root.
-
-> `favicon.ico` requests are normal browser behavior. This repo now includes a local `favicon.ico` file so you should not get that 404 anymore.
-
----
-
 ## Quick sanity commands
 
 From project root:
