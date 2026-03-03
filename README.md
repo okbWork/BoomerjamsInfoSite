@@ -191,7 +191,7 @@ From project root:
 rg --files
 
 # Search for critical content strings
-rg -n "kobbowork@gmail.com|Privacy Policy|Descriptions|LocalPartyAppTeam/LocalPartyApp|contact"
+rg -n "kob@kobbo.net|Privacy Policy|Descriptions|LocalPartyAppTeam/LocalPartyApp|contact"
 ```
 
 ---

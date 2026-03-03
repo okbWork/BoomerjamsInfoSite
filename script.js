@@ -102,7 +102,7 @@ if (contactForm) {
 
     const subject = encodeURIComponent('kobbo Portfolio Contact');
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:kobbowork@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:kob@kobbo.net?subject=${subject}&body=${body}`;
   };
 
 
@@ -146,7 +146,7 @@ if (contactForm) {
       }
 
       openMailClientFallback();
-      showSuccess('A draft email has been opened so you can finish sending your message to kobbowork@gmail.com.');
+      showSuccess('A draft email has been opened so you can finish sending your message to kob@kobbo.net.');
     }
   });
 }
@@ -192,7 +192,7 @@ if (deletionForm) {
       }
     } catch (error) {
       if (deletionStatus) {
-        deletionStatus.textContent = 'Could not confirm web submission. Please email kobbowork@gmail.com with your Firebase UID and account email.';
+        deletionStatus.textContent = 'Could not confirm web submission. Please email kob@kobbo.net with your Firebase UID and account email.';
         deletionStatus.classList.add('error');
       }
     } finally {
